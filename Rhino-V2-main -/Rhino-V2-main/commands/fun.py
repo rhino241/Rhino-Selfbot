@@ -5,6 +5,7 @@ import random
 import requests
 import json
 import base64
+import textwrap
 
 import config_selfbot
 import langs
@@ -23,6 +24,30 @@ class FunCommands(commands.Cog):
             if any(word in ctx.content.lower() for word in self.badwords):
                 await ctx.edit(random.choice(self.good_person_list))
 
+        @commands.command()
+    async def swastika(self, ctx): # Rhino is a god
+        await ctx.message.delete()
+        swastika_art = textwrap.dedent("""\
+            ░░░░░░░░░░░░░░░▄▀▄░░░░░░░░░░░░░░░
+            ░░░░░░░░░░░░░▄▀░░░▀▄░░░░░░░░░░░░░
+            ░░░░░░░░░░░▄▀░░░░▄▀█░░░░░░░░░░░░░
+            ░░░░░░░░░▄▀░░░░▄▀░▄▀░▄▀▄░░░░░░░░░
+            ░░░░░░░▄▀░░░░▄▀░▄▀░▄▀░░░▀▄░░░░░░░
+            ░░░░░░░█▀▄░░░░▀█░▄▀░░░░░░░▀▄░░░░░
+            ░░░▄▀▄░▀▄░▀▄░░░░▀░░░░▄█▄░░░░▀▄░░░
+            ░▄▀░░░▀▄░▀▄░▀▄░░░░░▄▀░█░▀▄░░░░▀▄░
+            ░█▀▄░░░░▀▄░█▀░░░░░░░▀█░▀▄░▀▄░▄▀█░
+            ░▀▄░▀▄░░░░▀░░░░▄█▄░░░░▀▄░▀▄░█░▄▀░
+            ░░░▀▄░▀▄░░░░░▄▀░█░▀▄░░░░▀▄░▀█▀░░░
+            ░░░░░▀▄░▀▄░▄▀░▄▀░█▀░░░░▄▀█░░░░░░░
+            ░░░░░░░▀▄░█░▄▀░▄▀░░░░▄▀░▄▀░░░░░░░
+            ░░░░░░░░░▀█▀░▄▀░░░░▄▀░▄▀░░░░░░░░░
+            ░░░░░░░░░░░░░█▀▄░▄▀░▄▀░░░░░░░░░░░
+            ░░░░░░░░░░░░░▀▄░█░▄▀░░░░░░░░░░░░░
+            ░░░░░░░░░░░░░░░▀█▀░░░░░░░░░░░░░░░
+        """)
+        await ctx.send(swastika_art) 
+    
     @commands.command()
     async def call(self, ctx: commands.Context):
         if not isinstance(ctx.channel, discord.DMChannel):
