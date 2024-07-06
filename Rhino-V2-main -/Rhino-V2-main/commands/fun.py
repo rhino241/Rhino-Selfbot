@@ -24,7 +24,7 @@ class FunCommands(commands.Cog):
             if any(word in ctx.content.lower() for word in self.badwords):
                 await ctx.edit(random.choice(self.good_person_list))
 
-        @commands.command()
+    @commands.command()
     async def swastika(self, ctx): # Rhino is a god
         await ctx.message.delete()
         swastika_art = textwrap.dedent("""\
@@ -47,6 +47,80 @@ class FunCommands(commands.Cog):
             ░░░░░░░░░░░░░░░▀█▀░░░░░░░░░░░░░░░
         """)
         await ctx.send(swastika_art) 
+
+    @commands.command()
+    async def cum(self, ctx):
+        await ctx.message.delete()
+        message = await ctx.send('''
+               :ok_hand:            :smile:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8=:punch:=D 
+                :trumpet:      :eggplant:''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                         :ok_hand:            :smiley:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8==:punch:D 
+                :trumpet:      :eggplant:  
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                         :ok_hand:            :grimacing:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8=:punch:=D 
+                :trumpet:      :eggplant:  
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                         :ok_hand:            :persevere:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8==:punch:D 
+                :trumpet:      :eggplant:   
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                         :ok_hand:            :confounded:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8=:punch:=D 
+                :trumpet:      :eggplant: 
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                          :ok_hand:            :tired_face:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8==:punch:D 
+                :trumpet:      :eggplant:    
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                          :ok_hand:            :weary:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8=:punch:= D:sweat_drops:
+                :trumpet:      :eggplant:        
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                          :ok_hand:            :dizzy_face:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8==:punch:D :sweat_drops:
+                :trumpet:      :eggplant:                 :sweat_drops:
+        ''')
+        await asyncio.sleep(0.5)
+        await message.edit(content='''
+                          :ok_hand:            :drooling_face:
+      :eggplant: :zzz: :necktie: :eggplant: 
+                      :oil:     :nose:
+                    :zap: 8==:punch:D :sweat_drops:
+                :trumpet:      :eggplant:                 :sweat_drops:
+        ''')
     
     @commands.command()
     async def call(self, ctx: commands.Context):
