@@ -54,6 +54,7 @@ class HelpCommands(commands.Cog):
 🎲| __**Fun:**__
  `{config_selfbot.prefix}cat`: {langs.help_fun_cat[config_selfbot.lang]}.
  `{config_selfbot.prefix}good`: {langs.help_fun_good[config_selfbot.lang]}.
+ `{config_selfbot.prefix}cum`: Displays cum emoji.
  `{config_selfbot.prefix}call`: {langs.help_fun_call[config_selfbot.lang]}.
  `{config_selfbot.prefix}gift <random/nerd/poor/hit>`: {langs.help_fun_gift[config_selfbot.lang]}.
  `{config_selfbot.prefix}hack`: {langs.help_fun_hack[config_selfbot.lang]}.
