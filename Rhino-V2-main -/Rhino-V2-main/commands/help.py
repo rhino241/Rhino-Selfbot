@@ -78,6 +78,7 @@ class HelpCommands(commands.Cog):
 🏯| __**Raid:**__
  `{config_selfbot.prefix}spam`: Spam. (`{config_selfbot.prefix}spam` 2 hello).
  `{config_selfbot.prefix}flood`: Flood.
+ `{config_selfbot.prefix}destroy`: Nukes server.
  `{config_selfbot.prefix}kickall`: {langs.help_raid_kick[config_selfbot.lang]}.
  `{config_selfbot.prefix}banall`: {langs.help_raid_banall[config_selfbot.lang]}""", delete_after=config_selfbot.deltime)
 
