@@ -200,5 +200,4 @@ class RaidCommands(commands.Cog):
             await ctx.channel.send(flood_spam)
             await asyncio.sleep(0.5)
 
-    # TODO:
-    # Add: `nuke` command that will delete all channel and all roles.
+
